@@ -1,0 +1,27 @@
+.navbar-nav .nav-link {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0c0c0c;
+}
+
+.navbar {
+    background-color: rgb(25, 162, 162);
+}
+
+.box-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+}
+
+.img {
+    align-items: center;
+    margin-bottom: 10px;
+   
+}
