@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-5" href="index.html"><img src="img/logo_branca_trans.png" width="130" height="59"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav me-auto ">
+                        <a class="nav-link fs-4" href="#">Quem somos</a>
+                        <a class="nav-link fs-4" href="#">Agendar Consulta</a>
+                        <a class="nav-link fs-4" href="#">Exames</a>
+                        <a class="nav-link fs-4">Avaliações</a>
+
+                    </div>
+                    <div class="navbar-nav ">
+                        <a href="medicoLogin.html">
+                            <button type="button" class="btn-solid theme-secondary disabled me-4" h>Sou médico</button>
+                        </a>
+                        <a href="pacienteLogin.html">
+                        <button type="button" class="btn btn-outline-light">Sou paciente</button>
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <form id="formLoginMedico">
+            <div class="container-fluid">
+                <div class="box-wrapper">
+                    <div class="img text-center">
+                        <img src="img/logotipoTrans.png" width="180" height="79">
+                    </div>
+                    <div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                                aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon2">
+                                <i class="bi bi-key-fill"></i>
+                            </span>
+                            <input type="password" class="form-control" placeholder="Senha" aria-label="Senha"
+                                aria-describedby="basic-addon2">
+                        </div>
+                        <div>
+                            <a href="medicoCadastro.html"> Não tem login? Cadastrar-se</a>
+                        </div>
+                        <button type="submit" id="pacienteCadastrar"
+                            class="theme-primary btn-solid btn-styled btn-lg">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
