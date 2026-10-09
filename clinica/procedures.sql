@@ -5,19 +5,20 @@ DELIMITER $$
 create procedure proc_login(
 IN cpf_entrada varchar(14),
 IN senha_entrada varchar(255), 
-OUT login int
+OUT verify int,
+OUT id_login int
 )
 
 BEGIN
-	select count(*) into login
+	select count(*), paciente_id into verify, id_login 
     from paciente 
     where cpf_entrada = cpf 
     and senha_entrada = senha;
     
-		if login > 0 then 
-			set login = 1;
+		if verify > 0 then 
+			set verify = 1;
         else
-			set login = 0;
+			set verify = 0;
         end if;
 END $$
 DELIMITER ;
@@ -55,7 +56,25 @@ DELIMITER $$
 DELIMITER $$ 
 
 create procedure proc_consulta(
-
+IN e_paciente int,
+IN data_entrada date,
+IN sintomas_consulta varchar(200),
+OUT resultado int
 )
-BEGIN
 
+BEGIN
+	
+    DECLARE e_medico int;
+	DECLARE EXIT HANDLER FOR sqlexception
+		
+	BEGIN
+        set resultado = 0;
+	END ;
+    
+    select medico_id into e_medico from medico ORDER BY RAND( ) LIMIT 1;
+    insert into consulta (fk_paciente, fk_medico, data_consulta, descricao) values (e_paciente, e_medico, data_entrada, sintomas_consulta);
+    set resultado = 1;
+    
+END $$
+    
+DELIMITER $$

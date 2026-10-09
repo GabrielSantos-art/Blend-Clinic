@@ -37,9 +37,10 @@ on update cascade	 -- se o id do paciente mudar, atualiza nos prontuários
 
 create table if not exists consulta(
 consulta_id int primary key auto_increment,
-data_consulta datetime not null,
+data_consulta date not null,
 fk_medico int not null,
 fk_paciente int not null,
+descricao varchar(200) not null,
 
 constraint fk_cons_med
 foreign key (fk_medico)
